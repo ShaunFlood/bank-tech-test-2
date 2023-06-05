@@ -14,6 +14,6 @@ describe('The bank account should display a zero balance', () => {
         const account = new BankAccount()
         account.deposit(500)
         account.withdraw(400)
-        expect(account.getBalance()).toBe(500);
+        expect(account.getBalance()).toBe(100);
     })
 });
