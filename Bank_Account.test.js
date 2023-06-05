@@ -35,4 +35,11 @@ describe('Bank account functionality', () => {
             account.withdraw(-200);
             }).toThrow('Invalid withdrawal amount')
     })
+    it('When we try to withdraw more than 500- then throw an error message', () => {
+        const account = new BankAccount
+        expect(() => {
+            account.withdraw(5001);
+        }).toThrow('Your withdrawal limit is 5000 per transaction')
+        })
+    })
 });
