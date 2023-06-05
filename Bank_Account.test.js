@@ -30,8 +30,9 @@ describe('Bank account functionality', () => {
           }).toThrow('Invalid withdrawal amount');
     })
     it('When we try to withdraw a negative amount, then throw an error message', () => {
-        const account = new BankAccount
+        const account = new BankAccount 
         expect(() => {
             account.withdraw(-200);
-          }).toThrow('Invalid withdrawal amount');
+            }).toThrow('Invalid withdrawal amount')
+    })
 });
