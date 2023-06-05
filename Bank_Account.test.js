@@ -22,4 +22,11 @@ describe('Bank account functionality', () => {
             account.withdraw(400);
           }).toThrow('Invalid withdrawal amount');
     })
+    it('When we try to withdraw a amount greater than the balance, then throw an error message', () => {
+        const account = new BankAccount
+        account.deposit(500)
+        expect(() => {
+            account.withdraw(600);
+          }).toThrow('Invalid withdrawal amount');
+    })
 });
