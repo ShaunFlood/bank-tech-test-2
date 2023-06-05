@@ -51,5 +51,11 @@ describe('Bank account functionality', () => {
                 account.deposit(-200);
             }).toThrow('Invalid deposit amount')
         })
+        it('When we try to deposit more than 5000 in one transaction, then throw an error', () => {
+            const account = new BankAccount();
+            expect(() => {
+                account.deposit(10000);
+            }).toThrow('Your deposit limit is 5000 per transaction')
+        })
     });
 });
