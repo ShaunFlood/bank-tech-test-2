@@ -1,0 +1,15 @@
+{
+  "name": "bank-tech-test-2",
+  "version": "1.0.0",
+  "description": "Makers had set out what is require of the program:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
