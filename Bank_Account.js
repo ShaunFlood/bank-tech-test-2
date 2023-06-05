@@ -7,6 +7,8 @@ class BankAccount {
         return this.balance;
     }
     deposit(number) {
+        if (number <= 0)
+            throw new Error('Invalid deposit amount')
         this.balance += number;
     }
     withdraw(number) {
