@@ -45,5 +45,11 @@ describe('Bank account functionality', () => {
             account.deposit(500)
             expect(account.getBalance()).toBe(500);
         })
+        it('When we try to deposit a negative number, then throw an error', () => {
+            const account = newBankAccount()
+            expect(() => {
+                account.deposit(-200);
+            }).toThrow('Invalid deposit ammount')
+        })
     })
 });
