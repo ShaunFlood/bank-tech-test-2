@@ -1,6 +1,6 @@
 const BankAccount = require ('./Bank_Account.js')
 
-describe('The bank account should display a zero balance', () => {
+describe('Bank account functionality', () => {
     it('When we call for the balance it should be zero', () => {
         const account = new BankAccount()
         expect(account.getBalance()).toBe(0);
@@ -15,5 +15,11 @@ describe('The bank account should display a zero balance', () => {
         account.deposit(500)
         account.withdraw(400)
         expect(account.getBalance()).toBe(100);
+    })
+    it('When we try to withdraw with a zero balance, then throw an error message', () => {
+        const account = new BankAccount()
+        expect(() => {
+            account.withdraw(400);
+          }).toThrow('Invalid withdrawal amount');
     })
 });
